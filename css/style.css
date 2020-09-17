@@ -21,6 +21,156 @@ video {
   width: 100%;
 }
 
+.action-cont {
+  position: absolute;
+  right: 5rem;
+  top: calc((100vh - 15rem) / 2);
+  display: flex;
+  flex-direction: column;
+  height: 15rem;
+  width: 5rem;
+  justify-content: space-around;
+  z-index: 2;
+}
+
+.action-cont > * {
+  height: calc(100% / 3);
+  width: 100%;
+  border-radius: 50%;
+  border: 5px solid white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+}
+
+.record-btn {
+  height: 80%;
+  width: 80%;
+  border-radius: 50%;
+  background-color: red;
+}
+
+.capture-btn {
+  height: 80%;
+  width: 80%;
+  border-radius: 50%;
+  background-color: white;
+}
+
+.timer-cont {
+  position: absolute;
+  color: aqua;
+  bottom: 7rem;
+  left: 4rem;
+}
+
+.timer {
+  display: none;
+}
+
+.filter-cont {
+  position: absolute;
+  top: calc((100vh - 16rem) / 2);
+  left: 5rem;
+  height: 16rem;
+  width: 5rem;
+  display: flex;
+  flex-direction: column;
+  z-index: 2;
+  justify-content: space-between;
+}
+
+.filter {
+  height: 3rem;
+  background-image: url("https://picsum.photos/seed/picsum/200/300");
+  background-position: center;
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+  background-blend-mode: color-burn;
+}
+
+.orange {
+  background-color: rgba(224, 153, 20, 0.315);
+}
+
+.pink {
+  background-color: rgba(255, 192, 203, 0.692);
+}
+
+.tansparent {
+  background-color: transparent;
+}
+
+.brown {
+  background-color: rgba(165, 42, 42, 0.521);
+}
+
+.filter-layer {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  background-blend-mode: color-burn;
+}
+
+.scale-record {
+  border-radius: 10%;
+  background-color: white;
+  height: 60%;
+  width: 60%;
+  animation-name: scale-record;
+  animation-iteration-count: infinite;
+  animation-duration: 1s;
+}
+
+.material-icons {
+  color: wheat;
+  position: absolute;
+  right: 5rem;
+  bottom: 2rem;
+  height: 5rem;
+  width: 5rem;
+  cursor: pointer;
+  z-index: 2;
+  text-align: center;
+}
+
+@keyframes scale-record {
+  0% {
+    transform: scale(0.8);
+  }
+  50% {
+    transform: scale(1);
+  }
+  100% {
+    transform: scale(0.8);
+  }
+}
+
+.scale-capture {
+  animation-name: scale-capture;
+  animation-iteration-count: 1;
+  animation-duration: 1s;
+}
+
+.material-icons.md-48 {
+  font-size: 48px;
+}
+
+@keyframes scale-capture {
+  0% {
+    transform: scale(0.8);
+  }
+  50% {
+    transform: scale(1);
+  }
+  100% {
+    transform: scale(0.8);
+  }
+}
+
 .permission-warning {
   background-color: #a38d33;
   padding: 1rem;
@@ -49,4 +199,65 @@ video {
   border: none;
   float: right;
   cursor: pointer;
+}
+
+@media screen and (max-width: 425px) {
+  .action-cont {
+    flex-direction: row;
+    top: 81%;
+    height: 10rem;
+    width: 100%;
+    left: 0;
+    right: 0;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .filter-cont {
+    flex-direction: row;
+    width: 15rem;
+    height: 5rem;
+    top: 2rem;
+    left: 0;
+    right: 0;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .filter {
+    width: 4rem;
+    flex-direction: row;
+  }
+
+  .action-cont > * {
+    height: 4rem;
+    width: 4rem;
+  }
+
+  .filter {
+    width: 3rem;
+  }
+
+  .material-icons.md-48 {
+    font-size: 48px;
+  }
+
+  .material-icons {
+    color: wheat;
+    position: absolute;
+    left: 0;
+    right: 0;
+    margin-left: auto;
+    margin-right: auto;
+    bottom: 2rem;
+    height: 5rem;
+    width: 5rem;
+    cursor: pointer;
+    text-align: center;
+    z-index: 2;
+    vertical-align: middle;
+  }
+  .permission-warning {
+    width: 90%;
+  }
 }
