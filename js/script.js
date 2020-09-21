@@ -82,10 +82,10 @@ function stopTimer() {
 }
 
 const filterLayer = document.querySelector(".filter-layer")
-const allfilter = document.querySelectorAll(".filter")
+const allFilter = document.querySelectorAll(".filter")
 
 // Filter change listeners
-allfilter.forEach(filterElem => {
+allFilter.forEach(filterElem => {
   filterElem.addEventListener("click", (e) => {
     transparentColor = getComputedStyle(filterElem).getPropertyValue('background-color')
     filterLayer.style.backgroundColor = transparentColor
