@@ -33,7 +33,7 @@ video {
   z-index: 2;
 }
 
-.action-cont > * {
+.action-cont>* {
   height: calc(100% / 3);
   width: 100%;
   border-radius: 50%;
@@ -141,9 +141,11 @@ video {
   0% {
     transform: scale(0.8);
   }
+
   50% {
     transform: scale(1);
   }
+
   100% {
     transform: scale(0.8);
   }
@@ -163,9 +165,11 @@ video {
   0% {
     transform: scale(0.8);
   }
+
   50% {
     transform: scale(1);
   }
+
   100% {
     transform: scale(0.8);
   }
@@ -229,7 +233,7 @@ video {
     flex-direction: row;
   }
 
-  .action-cont > * {
+  .action-cont>* {
     height: 4rem;
     width: 4rem;
   }
@@ -257,6 +261,7 @@ video {
     z-index: 2;
     vertical-align: middle;
   }
+
   .permission-warning {
     width: 90%;
   }

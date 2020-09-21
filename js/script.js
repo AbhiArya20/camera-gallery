@@ -72,6 +72,7 @@ function startTimer() {
   }
   timerID = setInterval(displayTimer, 1000);
 }
+
 // Stop timer while recording
 function stopTimer() {
   counter = 0
@@ -82,6 +83,7 @@ function stopTimer() {
 
 const filterLayer = document.querySelector(".filter-layer")
 const allfilter = document.querySelectorAll(".filter")
+
 // Filter change listeners
 allfilter.forEach(filterElem => {
   filterElem.addEventListener("click", (e) => {
@@ -90,12 +92,10 @@ allfilter.forEach(filterElem => {
   })
 })
 
-
 const gallery = document.querySelector(".gallery")
 gallery.addEventListener("click", (e) => {
   location.assign("./gallery.html")
 })
-
 
 requestPermissionBtn.addEventListener("click", async () => {
   try {
