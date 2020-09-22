@@ -143,7 +143,7 @@ gallery.addEventListener("click", (e) => {
 
 requestPermissionBtn.addEventListener("click", async () => {
   try {
-    await navigator.mediaDevices.getUserMedia({ video: true });
+    await navigator.mediaDevices.getUserMedia({ video: true, audio: true });
     permissionWarning.style.display = 'none';
   } catch (error) {
     permissionWarning.style.display = 'block';

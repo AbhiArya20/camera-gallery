@@ -12,8 +12,6 @@ setTimeout(() => {
       if (videoResult.length) {
         emptyGallery.classList.add("hide");
       }
-
-
       videoResult.forEach((videoObj) => {
         const url = URL.createObjectURL(videoObj.blobData);
         const mediaElem = document.createElement("div");

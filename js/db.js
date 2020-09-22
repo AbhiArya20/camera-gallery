@@ -15,4 +15,3 @@ openRequest.addEventListener("upgradeneeded", (e) => {
     DB.createObjectStore("video", { keyPath: "id" })
     DB.createObjectStore("image", { keyPath: "id" })
 })
-
