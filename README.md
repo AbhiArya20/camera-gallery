@@ -4,15 +4,17 @@ This is a simple web-based camera and gallery application built to understand th
 
 - [preview](https://example.com/)
 
-<p align="center">
 <div style="display:flex; flex-wrap:wrap; margin:3rem; justify-content:center;">
+<p align="center">
 <img style="width:80%; min-width:300px; height:auto" src="./screenshots/video.webp" alt="Project Video">
+</p>
 </div>
 <div style="display:flex; flex-wrap:wrap; gap:1.5rem; justify-content:center;">
+<p align="center">
 <img style="width:40%; min-width:300px; height:auto" src="./screenshots/camera.png" alt="Project Image">
 <img style="width:40%; min-width:300px; height:auto" src="./screenshots/gallery.png" alt="Project Image">
-</div>
 </p>
+</div>
 
 ##### Features
 
