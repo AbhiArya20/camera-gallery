@@ -4,7 +4,7 @@ This is a simple web-based camera and gallery application built to understand th
 - [preview](https://example.com/)
 
 <div style="display:flex; flex-wrap:wrap; margin:3rem; justify-content:center;">
-<video style="width:80%; min-width:300px; height:auto" src="./screenshots/video.mp4" alt="Project Video" autoplay>
+<img style="width:80%; min-width:300px; height:auto" src="./screenshots/video.webp" alt="Project Video">
 </div>
 
 <div style="display:flex; flex-wrap:wrap; gap:1.5rem; justify-content:center;">
@@ -17,7 +17,8 @@ This is a simple web-based camera and gallery application built to understand th
 
 - Capture Picture and Videos from web camera
 - Apply Filter
--  View all captured images in a gallery layout
+- View all captured images in a gallery layout (locally in indexedDB)
+- Download images or videos
 
 ##### Technologies used
 - HTML5

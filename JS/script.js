@@ -130,5 +130,5 @@ allfilter.forEach(filterElem => {
 
 const gallery = document.querySelector(".gallery")
 gallery.addEventListener("click", (e) => {
-  location.assign("../HTML/gallery.html")
+  location.assign("./gallery.html")
 })
