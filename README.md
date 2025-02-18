@@ -39,7 +39,7 @@ git clone https://github.com/AbhiArya20/camera-gallery.git
 - Navigate to the project directory:
 
 ```bash
-cd simple-camera-gallery
+cd camera-gallery
 ```
 
 - Open the index.html file in your browser
