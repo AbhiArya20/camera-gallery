@@ -1,8 +1,6 @@
-### Camera Gallery
+### [Camera Gallery](https://camera.abhiarya.in)
 
-This is a simple web-based camera and gallery application built to understand the basic of HTML, CSS, JS, and web APIs like DOM, UI Events, IndexedDB, MediaRecorder and so on.
-
-- [preview](https://example.com/)
+This is a simple web-based camera and gallery application built to understand the basic of HTML, CSS, JS, and web APIs like DOM, UI Events, IndexedDB, Navigation, MediaStream, Permission and so on.
 
 <div style="display:flex; flex-wrap:wrap; margin:3rem; justify-content:center;">
 <p align="center">
