@@ -4,6 +4,8 @@ const recordBtnCont = document.querySelector(".record-btn-cont");
 const captureBtnCont = document.querySelector(".capture-btn-cont");
 const recordBtn = document.querySelector(".record-btn");
 const captureBtn = document.querySelector(".capture-btn");
+const permissionWarning = document.querySelector(".permission-warning");
+const requestPermissionBtn = document.querySelector(".request-permission-btn");
 
 // Filter color variable
 let trasparentColor = "transparent"
@@ -21,6 +23,7 @@ const constraints = {
 
 // Camera access using mediaDevice API
 navigator.mediaDevices.getUserMedia(constraints).then((stream) => {
+  permissionWarning.style.display = 'none';
   video.srcObject = stream;
   recorder = new MediaRecorder(stream);
   recorder.addEventListener("start", (e) => {
@@ -44,6 +47,8 @@ navigator.mediaDevices.getUserMedia(constraints).then((stream) => {
     }
 
   });
+}).catch(() => {
+  permissionWarning.style.display = 'block';
 });
 
 // Recorder btn click listener
@@ -128,7 +133,23 @@ allfilter.forEach(filterElem => {
   })
 })
 
+
 const gallery = document.querySelector(".gallery")
 gallery.addEventListener("click", (e) => {
   location.assign("./gallery.html")
 })
+
+
+requestPermissionBtn.addEventListener("click", async () => {
+  try {
+    await navigator.mediaDevices.getUserMedia({ video: true });
+    permissionWarning.style.display = 'none';
+  } catch (error) {
+    permissionWarning.style.display = 'block';
+
+    if (error.name === 'NotAllowedError' || error.name === 'PermissionDeniedError') {
+      permissionWarning.textContent = 'You have denied camera access. Please enable it in your browser settings.';
+      requestPermissionBtn.style.display = "none";
+    }
+  }
+});
